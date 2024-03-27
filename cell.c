@@ -41,17 +41,18 @@ int main()
     float rate = 1e-3;
 
     printf("%f\n", cost(w, b));
-    
-    for (size_t i = 0; i < 500; ++i)
+
+    for (size_t i = 0; i < 2000; ++i)
     {
         float c = cost(w, b);
         float dw = 0.0f;
         float db = 0.0f;
-        for (size_t j = 0; j < train_count; ++j) {
+        for (size_t j = 0; j < train_count; ++j)
+        {
             float x = train[j][0];
             float y = x * w + b;
             float d = y - train[j][1];
-            dw += d * x; 
+            dw += d * x;
             db += d;
         }
         dw /= train_count;

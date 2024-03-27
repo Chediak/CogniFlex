@@ -2,6 +2,8 @@
 
 set -xe
 
-clang -Wall -Wextra -o main main.c
+clang -Wall -Wextra -o cell cell.c
+clang -Wall -Wextra -o gates gates.c
 
-./main
+./cell
+./gates
