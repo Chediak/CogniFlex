@@ -2,8 +2,8 @@
 
 set -xe
 
-clang -Wall -Wextra -o cell cell.c
-clang -Wall -Wextra -o gates gates.c
+clang -Wall -Wextra -o cell cell.c -lm
+clang -Wall -Wextra -o gates gates.c -lm
 
 ./cell
 ./gates
